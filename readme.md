@@ -50,3 +50,13 @@ THRESHOLD_MBIT=300              # Minimum acceptable bandwidth
 LIMIT_VALUE="5M"                # Speed limit to set if below threshold
 NUM_TESTS=2                     # How many speed tests to run each cycle
 SLEEP_BETWEEN=3                 # Delay (seconds) between tests
+
+
+##  Example Output
+```bash
+[2025-09-05 14:00:01] Starting 2 speedtests (speedtest-cli)…
+[2025-09-05 14:00:35] Test 1: 248.11 Mbit/s
+[2025-09-05 14:01:10] Test 2: 251.34 Mbit/s
+[2025-09-05 14:01:11] At least one result ≥ 300 Mbit/s → removing SABnzbd limit…
+[2025-09-05 14:01:11] SABnzbd response: {"status": true}
+[2025-09-05 14:01:11] Done.
