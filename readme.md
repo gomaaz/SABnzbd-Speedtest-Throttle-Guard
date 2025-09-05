@@ -50,7 +50,19 @@ THRESHOLD_MBIT=300              # Minimum acceptable bandwidth
 LIMIT_VALUE="5M"                # Speed limit to set if below threshold
 NUM_TESTS=2                     # How many speed tests to run each cycle
 SLEEP_BETWEEN=3                 # Delay (seconds) between tests
+```
 
+## 🔧 Install
+
+Create cronjob with
+```bash
+crontab -e
+```
+
+Then set the cronjob for e.g. every hour
+```bash
+0 * * * * /yourlocation/sab-throttle-guard.sh >/dev/null 2>&1
+```
 
 ##  Example Output
 ```bash
@@ -60,3 +72,4 @@ SLEEP_BETWEEN=3                 # Delay (seconds) between tests
 [2025-09-05 14:01:11] At least one result ≥ 300 Mbit/s → removing SABnzbd limit…
 [2025-09-05 14:01:11] SABnzbd response: {"status": true}
 [2025-09-05 14:01:11] Done.
+```
